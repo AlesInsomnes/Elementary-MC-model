@@ -1,0 +1,22 @@
+[package]
+name = "model_1_001"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+thiserror = "2.0.12"
+evalexpr = "12.0.2"
+rand = "0.9.1"
+rand_chacha = "0.9.0"
+chrono = "0.4.41"
+
+[profile.release]
+opt-level = 3
+debug = false 
+debug-assertions = false
+overflow-checks = false 
+lto = "fat" 
+codegen-units = 1 
+panic = "abort" 
+strip = "debuginfo" 
+target-cpu = "generic"
